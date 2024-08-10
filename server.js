@@ -3,10 +3,10 @@ const express = require('express');
 const Texts = require('./Model/model');
 
 const connectDB = require('./Lib/lib')
-
+var cors = require('cors')
 const app = express()
 const port = process.env.PORT || 3000;
-
+app.use(cors())
 connectDB()
 
 app.use(express.json())
